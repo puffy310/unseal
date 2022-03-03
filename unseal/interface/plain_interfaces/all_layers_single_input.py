@@ -24,8 +24,8 @@ with st.sidebar:
         
     # input 1
     placeholder1 = st.empty()
-    placeholder1.text_area(label='Input 1', on_change=utils.on_text_change, key='input_text', value=st.session_state.storage[0], kwargs=dict(col_idx=0, text_key='input_text_1'))
-    st.button(label="Sample", on_click=utils.sample_text, kwargs=dict(col_idx=0, key="input_text"), key="sample_text")
+    placeholder1.text_area(label='Input 1', on_change=utils.on_text_change, key='input_text_1', value=st.session_state.storage[0], kwargs=dict(col_idx=0, text_key='input_text_1'))
+    st.button(label="Sample", on_click=utils.sample_text, kwargs=dict(col_idx=0, key="input_text_1"), key="sample_text")
     
     # sometimes need to force a re-render
     st.button('Show Attention', on_click=utils.text_change, kwargs=dict(col_idx=0))
